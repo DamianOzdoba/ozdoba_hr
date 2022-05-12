@@ -1,0 +1,29 @@
+.bannerSection {
+  font-size: toRem(36);
+  text-align: center;
+  height: toRem(400);
+  width: toRem(500);
+  min-width: toRem(500);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    color: $color-white;
+    display: flex;
+    align-items: center;
+    height: 50%;
+  }
+
+  &__desc {
+    color: $color-white;
+  }
+
+  &__btn {
+    width: toRem(180);
+    text-align: center;
+    background-color: $color-primary;
+  }
+
+}

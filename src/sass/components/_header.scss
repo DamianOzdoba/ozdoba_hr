@@ -1,0 +1,17 @@
+.header {
+  margin: 0 auto;
+  height: toRem(120);
+  max-width: toRem(1440);
+  min-width: toRem(1000);
+  background-color: $color-primary;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+}

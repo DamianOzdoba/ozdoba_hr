@@ -1,0 +1,16 @@
+@import "common/normalize";
+
+@import "variables";
+@import "utils/functions";
+@import "utils/mixins";
+
+@import "common/colors";
+
+
+@import 'components/app';
+@import 'components/header';
+@import 'components/headerBtn';
+@import 'components/banner';
+@import 'components/bannerSection';
+@import 'components/about';
+

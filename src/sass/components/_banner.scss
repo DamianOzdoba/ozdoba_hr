@@ -1,0 +1,10 @@
+.banner {
+  margin: 0 auto;
+  height: calc(100vh - 120px);
+  background-color: $color-white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  background-size: cover;
+}

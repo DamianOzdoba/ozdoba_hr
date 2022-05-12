@@ -1,0 +1,13 @@
+.link {
+  color: $color-white;
+  font-size: toRem(20);
+  line-height: toRem(115);
+  margin-right: toRem(50);
+  text-decoration: none;
+  border-bottom: toRem(5) solid transparent;
+
+  &:hover {
+    color: $color-secondary;
+    border-bottom: toRem(5) solid $color-secondary;
+  }
+}
