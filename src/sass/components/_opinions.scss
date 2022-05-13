@@ -1,0 +1,16 @@
+.opinions {
+  margin: 0 auto;
+  max-width: toRem(1000);
+  text-align: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: toRem(26);
+    color: $color-secondary;
+  }
+}

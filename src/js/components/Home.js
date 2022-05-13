@@ -1,14 +1,16 @@
 import React from 'react';
 import Banner from './Banner';
-import About from './About';
-import Contact from './Contact';
+import AboutMe from './AboutMe';
+import Opinions from './Opinions';
+// import Contact from './Contact';
 
 function Home() {
     return (
         <>
             <Banner />
-            <About />
-            <Contact />
+            <AboutMe />
+            <Opinions />
+            {/*<Contact />*/}
         </>
     );
 }

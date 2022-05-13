@@ -1,0 +1,21 @@
+.opinions-carousel {
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: toRem(24);
+    color: $color-secondary;
+  }
+
+  &__description {
+    width: 80%;
+    margin-bottom: toRem(50);
+    font-size: toRem(24);
+    color: $color-white;
+  }
+}
