@@ -1,9 +1,11 @@
 import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
-import Header from './Header';
-import Home from './Home';
-import About from './About';
+import Header from './js/components/Header';
+import Home from './js/components/Home';
+import About from './js/components/About';
+import Employees from './js/components/Employees';
+import Footer from './js/components/Footer';
 
 
 function App() {
@@ -23,9 +25,11 @@ function App() {
             <div className="container">
                 <Header/>
                 <Routes>
-                    <Route path="/" element={<Home/>}/>
-                    <Route path="/about" element={<About/>}/>
+                    <Route path="/" element={<Home />}/>
+                    <Route path="/about" element={<About />}/>
+                    <Route path="/employees" element={<Employees />}/>
                 </Routes>
+                <Footer />
             </div>
         </ThemeProvider>
     );

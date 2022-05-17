@@ -3,3 +3,11 @@ $font-size-base: 16;
 $font-path: '../../fonts/';
 
 $fonts: ('Open Sans': 'opensans-variablefont_wdthwght-webfont', 'Charmonman': 'charmonman-regular-webfont');
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 1000px,
+        xl: 1200px
+);

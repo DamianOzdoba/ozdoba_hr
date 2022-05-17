@@ -1,30 +1,55 @@
 .about-me {
   margin: 0 auto;
-  max-width: toRem(1440);
+  max-width: toRem(1200);
   display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(lg) {
+    flex-direction: row;
+  }
 
   &__img {
-    margin: toRem(50) toRem(150);
-    height: toRem(400);
-    width: toRem(400);
+    margin: toRem(50) 0 0 0;
+    height: toRem(300);
+    width: toRem(300);
+    border: toRem(6) solid $color-secondary;
     border-radius: 50%;
+
+    @include mq(lg) {
+      margin: toRem(50) 0;
+      height: toRem(350);
+      width: toRem(350);
+
+    }
   }
 
   &__container {
-    margin-right: toRem(150);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    max-height: toRem(500);
+    margin: 0 toRem(20);
+    text-align: center;
+
+    @include mq(lg) {
+      text-align: left;
+    }
   }
 
   &__title {
-    font-size: toRem(36);
+    font-size: toRem(30);
     color: $color-secondary;
+
+    @include mq(lg) {
+      font-size: toRem(36);
+    }
   }
 
   &__description {
-    font-size: toRem(24);
+    font-size: toRem(20);
     color: $color-white;
+    overflow-wrap: break-word;
 
+    @include mq(lg) {
+      font-size: toRem(24);
+    }
   }
 }

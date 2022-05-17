@@ -1,17 +1,62 @@
 .header {
   margin: 0 auto;
   height: toRem(120);
-  max-width: toRem(1440);
-  min-width: toRem(1000);
+  max-width: toRem(1200);
+
   background-color: $color-primary;
   display: flex;
   justify-content: space-between;
 
+  position: relative;
+
+  @include mq(lg) {
+    //position: static;
+  }
+
+
   &__logo {
+    position: absolute;
+    left: toRem(-70);
+
+    @include mq(lg) {
+      left: 0;
+    }
   }
 
   &__nav {
     display: flex;
     align-items: center;
+  }
+
+  &__nav-container {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: toRem(120);
+    left: 0;
+    width: 100%;
+    background-color: $color-primary;
+
+    &.expanded {
+      display: flex;
+      z-index: 1;
+    }
+
+    @include mq(lg) {
+      display: flex;
+      flex-direction: row;
+      position: static;
+    }
+  }
+
+}
+
+.hamburger-react {
+  margin-right: toRem(20);
+  background-color: $color-secondary;
+  border-radius: toRem(10);
+
+  @include mq(lg) {
+    display: none;
   }
 }

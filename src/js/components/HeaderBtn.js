@@ -1,9 +1,9 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-function HeaderBtn({url, text}) {
+function HeaderBtn({url, text, hide}) {
     return (
-        <Link className="link" to={url}>{text}</Link>
+        <Link onClick={hide} className="link" to={url}>{text}</Link>
     );
 }
 

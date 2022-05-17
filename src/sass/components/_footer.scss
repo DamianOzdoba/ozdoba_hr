@@ -1,0 +1,22 @@
+.footer {
+  margin: 0;
+  height: toRem(120);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    //font-size: toRem(20);
+    color: $color-white;
+  }
+
+  &__link {
+    margin-left: toRem(20);
+    text-decoration: none;
+    color: $color-white;
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

@@ -7,13 +7,13 @@ function Banner() {
         <div className="banner" style={{backgroundImage: `url(${banner_bg})`}}>
             <BannerSection
                 title={'Zmiana pracy?'}
-                desc={'Oferty pracy dla kandydatów'}
-                btnText={'Dla kandydatów'}
+                desc={'Oferty dla kandydatów'}
+                btnText={'Aktualne oferty'}
                 url={'/employees'}/>
             <BannerSection
                 title={'Rekrutacja pracowników?'}
                 desc={'Poszukiwanie specjalistów IT'}
-                btnText={'Dla pracodawców'}
+                btnText={'Nawiążmy współpracę'}
                 url={'/employers'}/>
         </div>
     );

@@ -7,6 +7,9 @@ function BannerSection({title , desc, btnText, url}) {
             <h2 className="bannerSection__title">{title}</h2>
             <p className="bannerSection__desc">{desc}</p>
             <Button
+                sx={{
+                    fontSize: 18,
+                }}
                 className="bannerSection__btn"
                 variant="contained"
                 size="large"

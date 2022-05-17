@@ -1,44 +1,47 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import firebase from "../../firebase";
 import {Carousel} from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Opinion from "./Opinion";
 
 function OpinionsCarousel() {
+    const [opinions, setOpinions] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const ref = firebase.firestore().collection('opinions');
+
+        function getOpinions() {
+            setLoading(true);
+            ref.get().then((item) => {
+                const items = item.docs.map((doc) => doc.data());
+                setOpinions(items);
+                setLoading(false);
+            })
+        }
+        getOpinions();
+    },[]);
+
+    if (loading) {
+        return <h1>Loading...</h1>;
+    }
+
     return (
         <Carousel
             autoPlay={true}
-            interval={10000}
+            interval={5000}
             infiniteLoop={true}
             stopOnHover={true}
             showThumbs={false}
 
         >
-            <div className="opinions-carousel__container">
-                <h2 className="opinions-carousel__title">Title 1</h2>
-                <p className="opinions-carousel__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-                    consequatur, dolores doloribus ea eligendi error esse, fugit impedit iste itaque nulla numquam
-                    odit,
-                    quisquam quod reprehenderit saepe veritatis vitae. Architecto, corporis deleniti dicta, dolorum
-                    eaque earum expedita fugiat hic labore molestias nisi quaerat recusandae saepe similique tempora
-                    tempore veniam, vero.</p>
-            </div>
-            <div className="opinions-carousel__container">
-                <h2 className="opinions-carousel__title">Title 1</h2>
-                <p className="opinions-carousel__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-                    consequatur, dolores doloribus ea eligendi error esse, fugit impedit iste itaque nulla numquam
-                    odit,
-                    quisquam quod reprehenderit saepe veritatis vitae. Architecto, corporis deleniti dicta, dolorum
-                    eaque earum expedita fugiat hic labore molestias nisi quaerat recusandae saepe similique tempora
-                    tempore veniam, vero.</p>
-            </div>
-            <div className="opinions-carousel__container">
-                <h2 className="opinions-carousel__title">Title 1</h2>
-                <p className="opinions-carousel__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-                    consequatur, dolores doloribus ea eligendi error esse, fugit impedit iste itaque nulla numquam
-                    odit,
-                    quisquam quod reprehenderit saepe veritatis vitae. Architecto, corporis deleniti dicta, dolorum
-                    eaque earum expedita fugiat hic labore molestias nisi quaerat recusandae saepe similique tempora
-                    tempore veniam, vero.</p>
-            </div>
+            {opinions.map((item, idx) => (
+                <Opinion
+                    key={idx}
+                    title={item.title}
+                    opinion={item.opinion}
+                />
+            ))}
         </Carousel>
     );
 }

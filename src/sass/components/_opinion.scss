@@ -1,0 +1,28 @@
+.opinion {
+  height: toRem(250);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+    font-size: toRem(22);
+    color: $color-secondary;
+
+    @include mq(lg) {
+      font-size: toRem(24);
+    }
+  }
+
+  &__description {
+    width: 80%;
+    margin-bottom: toRem(50);
+    font-size: toRem(20);
+    color: $color-white;
+
+    @include mq(lg) {
+      font-size: toRem(24);
+    }
+  }
+}

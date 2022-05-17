@@ -1,0 +1,17 @@
+.employees {
+  margin: 0;
+  width: 100%;
+  background-color: $color-white;
+
+  &__offers {
+    text-align: center;
+    margin: 0 auto;
+    padding-top: toRem(50);
+    max-width: toRem(1200);
+
+    h2 {
+      margin: 0;
+    }
+  }
+}
+

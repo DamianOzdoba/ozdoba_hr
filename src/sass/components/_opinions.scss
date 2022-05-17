@@ -1,5 +1,6 @@
 .opinions {
   margin: 0 auto;
+  width: 100%;
   max-width: toRem(1000);
   text-align: center;
 
@@ -10,7 +11,13 @@
   }
 
   &__title {
-    font-size: toRem(26);
+    font-size: toRem(20);
     color: $color-secondary;
+
+    @include mq(lg) {
+      font-size: toRem(26);
+    }
   }
 }
+
+
