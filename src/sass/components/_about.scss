@@ -1,8 +1,8 @@
 .about {
   @include mq(lg) {
-  height: calc(100vh - 120px);
+    height: calc(100vh - 120px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }

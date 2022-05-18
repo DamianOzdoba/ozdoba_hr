@@ -1,6 +1,7 @@
 .employees {
   margin: 0;
   width: 100%;
+  min-height: calc(100vh - 240px);
   background-color: $color-white;
 
   &__offers {

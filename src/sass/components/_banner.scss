@@ -3,12 +3,13 @@
   background-color: $color-white;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 
   @include mq(lg) {
     flex-direction: row;
     height: calc(100vh - 120px);
+    gap: toRem(350);
   }
 
   background-size: cover;

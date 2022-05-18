@@ -9,10 +9,6 @@
 
   position: relative;
 
-  @include mq(lg) {
-    //position: static;
-  }
-
 
   &__logo {
     position: absolute;
