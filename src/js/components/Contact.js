@@ -7,7 +7,7 @@ function Contact() {
     return (
         <div className="contact">
             <div className="contact__title" style={{backgroundImage: `url(${contact_bg})`}}/>
-            <div className="contact-container">
+            <div className="contact__container">
                 <ContactInfo/>
                 <div className="contact__form">
                     <ContactForm/>

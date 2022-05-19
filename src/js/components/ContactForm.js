@@ -9,7 +9,6 @@ import MyTextarea from "./MyTextarea";
 function ContactForm() {
     const validateBoxShadow = 'inset 0 0 30px #ec9d9d';
 
-
     return (
         <Formik
             initialValues={{firstName: '', lastName: '', email: '', phone: '', message: ''}}
@@ -20,6 +19,8 @@ function ContactForm() {
                     .required(validateBoxShadow),
                 email: Yup.string()
                     .email('Invalid email address')
+                    .required(validateBoxShadow),
+                phone: Yup.string()
                     .required(validateBoxShadow),
                 message: Yup.string()
                     .required(validateBoxShadow),
@@ -71,11 +72,10 @@ function ContactForm() {
                     placeholder="YOUR MESSAGE"
                 />
                 <Button
-                    color="primary"
                     variant="contained"
                     fullWidth
                     type="submit"
-                    style={{
+                    sx={{
                         fontSize: '1rem',
                         fontFamily: '"Open Sans", sans serif',
                         borderRadius: '0',

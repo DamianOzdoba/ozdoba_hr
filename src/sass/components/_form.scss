@@ -1,6 +1,6 @@
 .form {
   padding: 0;
-  width: 90%;
+  width: 100%;
   max-width: toRem(600);
   min-width: toRem(300);
   display: flex;
@@ -16,14 +16,14 @@
     min-height: toRem(200);
 
     &::placeholder {
-      color: #a9a9a9;
+      color: $color-gray;
     }
   }
 
   button {
     background-color: $color-white;
     cursor: pointer;
-    color: #a9a9a9;
+    color: $color-gray;
 
     &:hover {
       color: black;

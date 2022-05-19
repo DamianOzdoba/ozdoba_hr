@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ContactForm from "./ContactForm";
-import {useMediaQuery} from "@mui/material";
 
 const style = {
     position: 'absolute',
@@ -55,8 +54,6 @@ function Offer({role, salary, location, description}) {
                 <Modal
                     open={openForm}
                     onClose={handleCloseForm}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
                         <ContactForm/>
@@ -78,8 +75,6 @@ function Offer({role, salary, location, description}) {
                 <Modal
                     open={open}
                     onClose={handleClose}
-                    aria-labelledby="modal-modal-title"
-                    aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
                         <Box>

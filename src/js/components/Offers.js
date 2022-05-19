@@ -53,7 +53,7 @@ function Offers() {
             <div className="offers">
                 <form className="offers__filter" onSubmit={handleSubmit}>
                     <FormControl sx={{m: 1, minWidth: 155,}}>
-                        <InputLabel id="simple-select-label">
+                        <InputLabel sx={{fontWeight: '600'}}>
                             Location
                         </InputLabel>
                         <Select
@@ -61,8 +61,6 @@ function Offers() {
                                 fontWeight: '600',
                                 color: 'secondary.main',
                             }}
-                            labelId="simple-select-label"
-                            id="simple-select"
                             value={location}
                             defaultValue="default"
                             label="Location"
