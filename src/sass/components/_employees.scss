@@ -10,8 +10,11 @@
     padding-top: toRem(50);
     max-width: toRem(1200);
 
-    h2 {
+    &>h2 {
       margin: 0;
+      padding: toRem(20) 0;
+      color: $color-primary;
+      font-weight: 600;
     }
   }
 }

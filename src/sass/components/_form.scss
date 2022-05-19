@@ -2,14 +2,14 @@
   padding: 0;
   width: 90%;
   max-width: toRem(600);
-  min-width: toRem(350);
+  min-width: toRem(300);
   display: flex;
   flex-direction: column;
   font-size: toRem(12);
 
   @include mq(lg) {
     font-size: toRem(16);
-    width: 50%;
+    width: 100%;
   }
 
   textarea {

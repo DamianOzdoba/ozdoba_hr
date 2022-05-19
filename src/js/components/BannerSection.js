@@ -8,6 +8,7 @@ function BannerSection({title , desc, btnText, url}) {
             <p className="bannerSection__desc">{desc}</p>
             <Button
                 sx={{
+                    fontFamily: "'Montserrat', sans serif",
                     fontSize: 18,
                 }}
                 className="bannerSection__btn"

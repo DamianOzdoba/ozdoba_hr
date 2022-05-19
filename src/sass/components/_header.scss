@@ -2,11 +2,9 @@
   margin: 0 auto;
   height: toRem(120);
   max-width: toRem(1200);
-
   background-color: $color-primary;
   display: flex;
   justify-content: space-between;
-
   position: relative;
 
 
@@ -35,7 +33,7 @@
 
     &.expanded {
       display: flex;
-      z-index: 1;
+      z-index: 10;
     }
 
     @include mq(lg) {

@@ -19,6 +19,13 @@ function App() {
                 main: '#e97373',
             },
         },
+        typography: {
+            fontFamily: [
+                "Montserrat",
+                "sans-serif"
+            ].join(","),
+            fontWeight: 'bold',
+        }
     });
 
     return (

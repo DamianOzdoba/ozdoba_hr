@@ -1,5 +1,16 @@
 .offers {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+
+  &__filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: toRem(20);
+
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }

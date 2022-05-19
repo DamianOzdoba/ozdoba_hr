@@ -48,6 +48,13 @@
       padding: toRem(50) 0;
       max-width: toRem(1200);
       flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__form {
+    @include mq(lg) {
+      width: 50%;
     }
   }
 }
