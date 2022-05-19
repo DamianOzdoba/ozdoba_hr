@@ -2,7 +2,8 @@ $font-size-base: 16;
 
 $font-path: '../../fonts/';
 
-$fonts: ('Open Sans': 'opensans-variablefont_wdthwght-webfont', 'Charmonman': 'charmonman-regular-webfont');
+$fonts: ('Open Sans': 'opensans-variablefont_wdthwght-webfont',
+        'Montserrat': 'montserrat-variablefont_wght-webfont');
 
 $grid-breakpoints: (
         xs: 0,

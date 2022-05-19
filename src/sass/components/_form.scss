@@ -1,0 +1,54 @@
+.form {
+  padding: 0;
+  width: 90%;
+  max-width: toRem(600);
+  min-width: toRem(350);
+  display: flex;
+  flex-direction: column;
+  font-size: toRem(12);
+
+  @include mq(lg) {
+    font-size: toRem(16);
+    width: 50%;
+  }
+
+  textarea {
+    min-height: toRem(200);
+
+    &::placeholder {
+      color: #a9a9a9;
+    }
+  }
+
+  button {
+    background-color: $color-white;
+    cursor: pointer;
+    color: #a9a9a9;
+
+    &:hover {
+      color: black;
+      background-color: $color-secondary;
+    }
+  }
+
+  input,
+  textarea,
+  button {
+    box-sizing: border-box;
+    padding: toRem(20);
+    border: 2px solid $color-secondary;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
+
+    & > .text-input {
+      width: 50%;
+    }
+  }
+}

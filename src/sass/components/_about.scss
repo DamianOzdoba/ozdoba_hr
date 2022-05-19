@@ -1,6 +1,6 @@
 .about {
   @include mq(lg) {
-    height: calc(100vh - 120px);
+    min-height: calc(100vh - 240px);
     display: flex;
     flex-direction: column;
     justify-content: space-around;

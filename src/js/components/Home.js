@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import AboutMe from './AboutMe';
 import Opinions from './Opinions';
-// import Contact from './Contact';
+import Contact from './Contact';
 
 function Home() {
     return (
@@ -10,7 +10,7 @@ function Home() {
             <Banner />
             <AboutMe />
             <Opinions />
-            {/*<Contact />*/}
+            <Contact />
         </>
     );
 }

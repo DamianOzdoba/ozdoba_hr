@@ -4,6 +4,7 @@
 @import "utils/functions";
 @import "utils/mixins";
 
+@import "./typing/typing";
 @import "common/colors";
 
 
@@ -20,5 +21,8 @@
 @import 'components/employees';
 @import 'components/offers';
 @import 'components/offer';
+@import 'components/contact';
+@import 'components/contactInfo';
+@import 'components/form';
 @import 'components/footer';
 

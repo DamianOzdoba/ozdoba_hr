@@ -1,0 +1,53 @@
+.contact {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq(lg) {
+    min-height: calc(100vh - 240px);
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    min-height: toRem(200);
+    width: 100%;
+
+    @include mq(lg) {
+      min-height: toRem(500);
+    }
+
+
+    h2 {
+      color: $color-white;
+      font-size: toRem(24);
+      text-align: center;
+      width: toRem(220);
+
+      @include mq(lg) {
+        width: auto;
+        font-size: toRem(36);
+      }
+    }
+  }
+
+  &-container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: toRem(20);
+    width: 100%;
+
+    @include mq(lg) {
+      padding: toRem(50) 0;
+      max-width: toRem(1200);
+      flex-direction: row;
+    }
+  }
+}
