@@ -80,7 +80,9 @@ function Offers() {
                         color="primary"
                         variant="contained"
                         style={{
-                            fontSize: '1rem',
+                            fontSize: 18,
+                            height: '55px',
+                            width: '110px'
                         }}>
                         FILTRUJ
                     </Button>

@@ -10,7 +10,7 @@
   align-items: center;
 
   @include mq(lg) {
-    font-size: toRem(36);
+    font-size: toRem(32);
     height: toRem(400);
   }
 
@@ -25,11 +25,4 @@
   &__desc {
     color: $color-white;
   }
-
-  &__btn {
-    width: toRem(180);
-    text-align: center;
-    font-weight: 800;
-  }
-
 }
