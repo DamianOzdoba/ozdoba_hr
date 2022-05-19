@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import ContactForm from "./ContactForm";
+import {useMediaQuery} from "@mui/material";
 
 const style = {
     position: 'absolute',
@@ -12,6 +13,7 @@ const style = {
     transform: 'translate(-50%, -50%)',
     minWidth: 300,
     maxWidth: 600,
+    maxHeight: '60vh',
     textAlign: 'center',
     color: 'white',
     bgcolor: 'primary.main',
@@ -30,7 +32,6 @@ function Offer({role, salary, location, description}) {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-
 
 
     function OfferForm() {
@@ -58,7 +59,7 @@ function Offer({role, salary, location, description}) {
                     aria-describedby="modal-modal-description"
                 >
                     <Box sx={style}>
-                        <ContactForm />
+                        <ContactForm/>
                     </Box>
                 </Modal>
 
@@ -82,13 +83,13 @@ function Offer({role, salary, location, description}) {
                 >
                     <Box sx={style}>
                         <Box>
-                            <Typography component="h2" sx={{fontSize: '36px', fontWeight: '700'}}>
+                            <Typography component="h2" sx={{fontSize: '1.5rem', fontWeight: '700'}}>
                                 {role}
                             </Typography>
                             <Typography sx={{color: 'secondary.main', fontWeight: '700'}}>{salary}</Typography>
                             <Typography sx={{color: 'secondary.main', fontWeight: '700'}}>{location}</Typography>
                         </Box>
-                        <Typography sx={{}}>{description}</Typography>
+                        <Typography sx={{overflowY: 'auto'}}>{description}</Typography>
                         <OfferForm/>
                     </Box>
                 </Modal>

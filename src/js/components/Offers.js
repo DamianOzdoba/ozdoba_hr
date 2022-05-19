@@ -50,57 +50,58 @@ function Offers() {
 
     return (
         <>
-        <div className="offers">
-            <form className="offers__filter" onSubmit={handleSubmit}>
-                <FormControl sx={{m: 1, minWidth: 155, }}>
-                <InputLabel id="simple-select-label">
-                    Location
-                </InputLabel>
-                <Select
-                    sx={{
-                        fontWeight: '600',
-                        color: 'secondary.main',
-                    }}
-                    labelId="simple-select-label"
-                    id="simple-select"
-                    value={location}
-                    defaultValue="default"
-                    label="Location"
-                    onChange={handleChange}
-                >
-                    <MenuItem value="default">
-                        All Locations
-                    </MenuItem>
-                    {offers.map((item, idx) => (
-                        <MenuItem key={idx} value={item.location}>{item.location}</MenuItem>
-                    ))}
-                </Select>
-            </FormControl>
-            <Button
-                type="submit"
-                color="primary"
-                variant="contained"
-                style={{
-                    fontSize: '1rem',
-                }}>
-                FILTRUJ
-            </Button>
-        </form>
-        </div>
-    <div className="offers__container">
-        {filtered.map((item, idx) => (
-            <Offer
-                key={idx}
-                role={item.role}
-                salary={item.salary}
-                location={item.location}
-                description={item.description}
-            />
-        ))}
-    </div>
-</>
-)
-    ;
+            <div className="offers">
+                <form className="offers__filter" onSubmit={handleSubmit}>
+                    <FormControl sx={{m: 1, minWidth: 155,}}>
+                        <InputLabel id="simple-select-label">
+                            Location
+                        </InputLabel>
+                        <Select
+                            sx={{
+                                fontWeight: '600',
+                                color: 'secondary.main',
+                            }}
+                            labelId="simple-select-label"
+                            id="simple-select"
+                            value={location}
+                            defaultValue="default"
+                            label="Location"
+                            onChange={handleChange}
+                        >
+                            <MenuItem sx={{fontWeight: 'bold'}} value="default">
+                                All Locations
+                            </MenuItem>
+                            {offers.map((item, idx) => (
+                                <MenuItem sx={{fontWeight: 'bold'}} key={idx}
+                                          value={item.location}>{item.location}</MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
+                    <Button
+                        type="submit"
+                        color="primary"
+                        variant="contained"
+                        style={{
+                            fontSize: '1rem',
+                        }}>
+                        FILTRUJ
+                    </Button>
+                </form>
+            </div>
+            <div className="offers__container">
+                {filtered.map((item, idx) => (
+                    <Offer
+                        key={idx}
+                        role={item.role}
+                        salary={item.salary}
+                        location={item.location}
+                        description={item.description}
+                    />
+                ))}
+            </div>
+        </>
+    )
+        ;
 }
 
 export default Offers;
