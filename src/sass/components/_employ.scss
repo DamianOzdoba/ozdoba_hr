@@ -1,4 +1,4 @@
-.employees {
+.employ {
   margin: 0;
   width: 100%;
   min-height: calc(100vh - 240px);
@@ -8,14 +8,19 @@
   &__offers {
     text-align: center;
     margin: 0 auto;
-    padding-top: toRem(50);
     max-width: toRem(1200);
 
-    &>h2 {
+    @include mq(lg) {
+      padding-top: toRem(50);
+    }
+
+    & > h2 {
+      font-size: toRem(32);
       margin: 0;
       padding: toRem(20) 0;
       color: $color-primary;
       font-weight: 600;
+      text-shadow: 3px 3px 3px $color-secondary;
     }
   }
 }

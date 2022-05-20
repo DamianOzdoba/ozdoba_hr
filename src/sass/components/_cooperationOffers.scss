@@ -3,6 +3,9 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: toRem(72);
+
+    @include mq(lg) {
+      margin-top: toRem(72);
+    }
   }
 }
