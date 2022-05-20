@@ -1,17 +1,25 @@
 .banner {
   margin: 0 auto;
-  background-color: $color-white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @include mq(lg) {
-    flex-direction: row;
-    height: calc(100vh - 120px);
-    justify-content: space-around;
-  }
-
   background-size: cover;
   background-position: center;
+
+  @include mq(lg) {
+    height: calc(100vh - 120px);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include mq(lg) {
+      width: 100%;
+      max-width: toRem(1200);
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
 }
