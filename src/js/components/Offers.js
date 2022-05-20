@@ -34,6 +34,9 @@ function Offers() {
         return <h1>Loading...</h1>;
     }
 
+    function getFilterList() {
+        return (offers.map(el => el.location)).filter((el, idx, arr) => arr.indexOf(el) === idx);
+    }
 
     function handleChange(event) {
         setLocation(event.target.value);
@@ -54,7 +57,7 @@ function Offers() {
                 <form className="offers__filter" onSubmit={handleSubmit}>
                     <FormControl sx={{m: 1, minWidth: 155,}}>
                         <InputLabel sx={{fontWeight: '600'}}>
-                            Location
+                            Lokalizacja
                         </InputLabel>
                         <Select
                             sx={{
@@ -63,15 +66,15 @@ function Offers() {
                             }}
                             value={location}
                             defaultValue="default"
-                            label="Location"
+                            label="Lokalizacja"
                             onChange={handleChange}
                         >
                             <MenuItem sx={{fontWeight: 'bold'}} value="default">
-                                All Locations
+                                Wszystkie
                             </MenuItem>
-                            {offers.map((item, idx) => (
+                            {getFilterList().map((item, idx) => (
                                 <MenuItem sx={{fontWeight: 'bold'}} key={idx}
-                                          value={item.location}>{item.location}</MenuItem>
+                                          value={item}>{item}</MenuItem>
                             ))}
                         </Select>
                     </FormControl>

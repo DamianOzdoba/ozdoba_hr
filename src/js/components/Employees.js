@@ -6,7 +6,7 @@ function Employees() {
     return (
         <div className="employ" style={{backgroundImage: `url(${offers_bg_white})`}}>
             <div className="employ__offers">
-                <h2>AKLUALNIE OTWARTE REKRUTACJE:</h2>
+                <h2>Aktualne oferty rekrutacyjne:</h2>
                 <Offers />
             </div>
         </div>
