@@ -9,7 +9,7 @@
   @include mq(lg) {
     flex-direction: row;
     height: calc(100vh - 120px);
-    gap: toRem(350);
+    justify-content: space-around;
   }
 
   background-size: cover;

@@ -14,10 +14,6 @@
 
   textarea {
     min-height: toRem(200);
-
-    &::placeholder {
-      color: $color-gray;
-    }
   }
 
   button {

@@ -1,11 +1,11 @@
-.employees {
+.employers {
   margin: 0;
   width: 100%;
   min-height: calc(100vh - 240px);
   background-size: cover;
   background-position: center;
 
-  &__offers {
+  &__cooperation-offers {
     text-align: center;
     margin: 0 auto;
     padding-top: toRem(50);
@@ -20,3 +20,9 @@
   }
 }
 
+.cooperation-offers {
+  &__container {
+    margin-top: toRem(72);
+  }
+
+}

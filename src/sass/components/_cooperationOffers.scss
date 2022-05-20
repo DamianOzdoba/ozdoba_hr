@@ -1,0 +1,8 @@
+.cooperation-offers {
+  &__container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: toRem(72);
+  }
+}

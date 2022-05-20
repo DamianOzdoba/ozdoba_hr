@@ -4,7 +4,7 @@ import Button from "@mui/material/Button";
 function BannerSection({title , desc, btnText, url}) {
     return (
         <div className="bannerSection">
-            <h2 className="bannerSection__title">{title}</h2>
+            <h1 className="bannerSection__title">{title}</h1>
             <p className="bannerSection__desc">{desc}</p>
             <Button
                 sx={{

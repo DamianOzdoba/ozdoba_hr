@@ -5,6 +5,7 @@ import Header from './js/components/Header';
 import Home from './js/components/Home';
 import About from './js/components/About';
 import Employees from './js/components/Employees';
+import Employers from "./js/components/Employers";
 import Contact from "./js/components/Contact";
 import Footer from './js/components/Footer';
 
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/" element={<Home />}/>
                     <Route path="/about" element={<About />}/>
                     <Route path="/employees" element={<Employees />}/>
+                    <Route path="/employers" element={<Employers />}/>
                     <Route path="/contact" element={<Contact />}/>
                 </Routes>
                 <Footer />
