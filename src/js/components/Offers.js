@@ -30,12 +30,8 @@ function Offers() {
         getOffers();
     }, []);
 
-    if (loading) {
-        return <h1>Loading...</h1>;
-    }
-
     function getFilterList() {
-        return (offers.map(el => el.location)).filter((el, idx, arr) => arr.indexOf(el) === idx);
+        return offers.map(({location}) => location).filter((el, idx, arr) => arr.indexOf(el) === idx);
     }
 
     function handleChange(event) {
@@ -49,6 +45,11 @@ function Offers() {
         } else {
             setFiltered(offers.filter(item => item.location === location));
         }
+    }
+
+
+    if (loading) {
+        return <h1>Loading...</h1>;
     }
 
     return (

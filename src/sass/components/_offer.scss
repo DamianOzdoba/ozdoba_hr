@@ -10,11 +10,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transform: scale(1);
 
-  &:hover {
+  &:target {
+    transition: 0.3s;
     transform: scale(1.1);
     cursor: pointer;
     color: $color-secondary;
+  }
+
+  &:hover {
+    @include mq(lg) {
+      transition: 0.3s;
+      transform: scale(1.1);
+      cursor: pointer;
+      color: $color-secondary;
+    }
   }
 
   &__role {

@@ -5,10 +5,8 @@ const MyTextarea = ({...props}) => {
     const [field, meta] = useField(props);
 
     return (
-        <>
             <textarea {...field} {...props}
                    style={{boxShadow: `${meta.touched && meta.error ? meta.error : null}`}}/>
-        </>
     );
 };
 
