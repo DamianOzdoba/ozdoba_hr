@@ -28,6 +28,7 @@ function OpinionsCarousel() {
 
     return (
         <Carousel
+            emulateTouch={true}
             autoPlay={true}
             interval={5000}
             infiniteLoop={true}
